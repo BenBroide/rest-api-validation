@@ -15,16 +15,8 @@ function twentyseventeen_parent_theme_enqueue_styles() {
 	wp_enqueue_script( 'wp-api' );
 	wp_localize_script( 'wp-api', 'wpApiSettings', [
 		'root'                 => esc_url_raw( rest_url() ),
-		'isdaVersionString'    => 'isda/v1/',
 		'nonce'                => wp_create_nonce( 'wp_rest' ),
 		'siteUrl'              => esc_url_raw( get_site_url() ),
-		'isSingle'             => is_single() ? true : false,
-		'postType'             => get_post_type(),
-		'postId'               => get_the_ID(),
-		'templateDirectoryUri' => get_template_directory_uri(),
-		'pageUrl'              => get_permalink( get_the_ID() ),
-		'pagePath'             => str_replace( get_site_url(), '', get_permalink( get_the_ID()) ),
-		'title'                => get_the_title( get_the_ID() ),
 	] );
 	wp_enqueue_script( 'vue', 'https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js' );
 	wp_enqueue_script( 'vee-validate', 'https://cdnjs.cloudflare.com/ajax/libs/vee-validate/2.0.9/vee-validate.js', ['vue' ] );
