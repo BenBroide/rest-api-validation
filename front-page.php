@@ -53,6 +53,6 @@ get_header(); ?>
         </main><!-- #main -->
     </div><!-- #primary -->
     <script>
-       
+
     </script>
 <?php get_footer();
